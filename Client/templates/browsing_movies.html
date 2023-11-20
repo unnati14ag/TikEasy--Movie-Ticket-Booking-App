@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/browse_movies_timeslot_styles.css') }}">
+
+</head>
+<body class="wrapper">
+    <!-- <div class="wrapper"> -->
+        <header>
+            <nav>
+                <div class="logo">Movies</div>
+                <div class="search-bar">
+                    <input id = "searchText" type="text" placeholder="Search by name, year, location...">
+                    <button id = "search" class="search_btn">Search</button>
+                </div>
+                <div class="user-icon">
+                    <img src="{{url_for('static',filename='Images/user-icon.jpg') }}" alt="User Icon" id="userIcon">
+
+                    <div class="user-popup" id="userPopup">
+                        <div id = "user_details" class="user-details">
+                        </div>
+                        <button id="logoutButton" class="search_btn">Logout</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="movie-list">
+                <!-- Movie tiles will be dynamically generated here -->
+                <!-- Example Movie Tile:
+                <div class="movie-tile">
+                    <h2>Movie Name</h2>
+                    <p>Release Date: January 1, 2023</p>
+                    <p>Theater: Theater Name</p>
+                    <p>Location: Theater Location</p>
+                </div>
+                -->
+            </div>
+        </main>
+    <!-- </div> -->
+
+
+    <script src="{{url_for('static',filename='JS/browse_movies.js') }}"></script>
+
+</body>
+</html>

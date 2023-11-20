@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0px 0px;
+    background-color:aquamarine;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+    
+}
+
+h1 {
+    color: #007bff;
+}
+
+/* Center the container div both horizontally and vertically */
+.box {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 110vh;
+}
+
+/* Style the moving text */
+.moving-text {
+    font-size: 24px;
+    background-color: #3498db; /* Background color for the box */
+    color: #fff; /* Text color */
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(81, 64, 233, 0.7);
+
+    animation: moveText 3s linear infinite; /* Apply the animation */
+    color:brown;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Define the animation keyframes */
+@keyframes moveText {
+    0% {
+        transform: translateX(0); /* Start from the initial position */
+    }
+    50% {
+        transform: translateX(50px); /* Move the text 50px to the right */
+    }
+    100% {
+        transform: translateX(0); /* Return to the initial position */
+    }
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* Buttons animation */
+.search_btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+.search_btn:hover{
+    background-color:slateblue;
+    transition: ease;
+    transition-delay: 0.2s;
+}
+
+.proceed-button {
+    position:relative;
+    left: 50%;
+    right: 50%;
+
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 60px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+    box-shadow: 0 0 10px rgba(2, 13, 204, 0.3);
+}
+
+.proceed-button:hover {
+    background-color: #2980b9;
+    color:cyan;
+}
+
+
+.user-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user-popup {
+    display: none;
+    position:absolute;
+    top: 50px;
+    right: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.user-details h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.user-details p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: bold;
+    color:blue;
+}
+
+.movie-list {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.movie-tile {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.movie-tile:hover{
+    border: 1px solid ;
+    border-color:black;
+    transition:ease;
+    transition: 0.4s;
+}
+
+.container {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    /* background-color: #f0f0f0; */
+}
+
+.date-input,
+.time-input {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="date"],
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+    .movie-tile {
+        width: calc(50% - 20px);
+    }
+}

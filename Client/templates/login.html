@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/log_reg_styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main_heading">TikEasy</h1>
+        <h2>Login</h2>
+        
+        <form id="loginForm">
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit" class="log_reg_btn">Login</button>
+        
+        </form>
+
+        <p>Don't have an account? <a href="http://127.0.0.1:3000/register?function=registerPage">Register here</a></p>
+    </div>
+
+    <script src="{{url_for('static',filename='JS/login_register_validate.js') }}"></script>
+</body>
+</html>
