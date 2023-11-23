@@ -22,7 +22,24 @@
         
         </form>
 
-        <p>Don't have an account? <a href="http://127.0.0.1:3000/register?function=registerPage">Register here</a></p>
+        <p id="redirectLink">Click here to register</p>
+
+    <script>
+        // Get the current URL
+        var currentURL = window.location.href;
+
+        // Construct the new URL
+        var newURL = currentURL + "/register?function=registerPage";
+
+        // Get the element by ID
+        var redirectLinkElement = document.getElementById("redirectLink");
+
+        // Add a click event listener to the element
+        redirectLinkElement.addEventListener("click", function() {
+            // Redirect to the new URL
+            window.location.href = newURL;
+        });
+    </script>
     </div>
 
     <script src="{{url_for('static',filename='JS/login_register_validate.js') }}"></script>
