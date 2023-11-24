@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'tikeasy'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7673DD719A9145CE8FECF0CC58ACAA96 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84BCF231B047460F829E5E5C0130BE3B }}
           package: .
